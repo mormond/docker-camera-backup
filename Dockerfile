@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./python/*.py ./
 
-VOLUME ["/home/archive", "/home/camera"]
+VOLUME ["/home/archive", "/home/ftpusers"]
 
 CMD "/bin/sh"
 #CMD [ "python", "./camera.py" ]
