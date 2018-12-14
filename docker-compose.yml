@@ -1,0 +1,14 @@
+version: '3'
+services:
+  camera:
+    image: camerapy:latest
+    container_name: camerapy
+    restart: unless-stopped
+    network_mode: host
+    tty: true
+    volumes:
+      - /home/pi/docker/ftp/ftp/ftpusers:/home/ftpusers
+      - /home/pi/docker/ftp/archive:/home/archive
+    environment:
+      - AZURE_ACCOUNT_KEY
+      - NOTIFICATION_URL
