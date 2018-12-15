@@ -1,6 +1,7 @@
 import os
 import errno
 import socket
+import shutil
 import azure.storage
 from azure.storage.blob import BlockBlobService
 from azure.storage.blob import ContentSettings
@@ -42,7 +43,8 @@ def archiveFile(filepath, archivepath, filename):
 	#print filepath + " : " + archivepath + " : " + filename
 	if (not os.path.exists(archivepath)):
 		os.makedirs(archivepath)
-	os.rename(filepath, os.path.join(archivepath, filename))
+	shutil.move(filepath, os.path.join(archivepath, filename))
+	#os.rename(filepath, os.path.join(archivepath, filename))
 
 
 def uploadToAzure(files):
