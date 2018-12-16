@@ -63,8 +63,16 @@ def uploadToAzure(files):
 
 		if (filepath[-4:] == ".jpg") and (os.path.getsize(filepath) > c.filesize_minThreshold):
 			try:
-				containerName = file[0][20:28]
+				containerName = file[0][-13:-5]
 				block_blob_service.create_container(containerName)
+
+#				print("*****")
+#				print ("Container Name: " + containerName)
+#				print ("Blob name: " + file[1])
+#				print ("File path: " + filepath)
+#				print ("Content settings: " + ContentSettings(content_type = c.jpgContentType)
+#				print("____-")
+
 				block_blob_service.create_blob_from_path(
 					container_name = containerName, 	# Extract the date
 					blob_name = file[1],			# filename
