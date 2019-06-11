@@ -8,7 +8,7 @@ services:
     tty: true
     volumes:
       - /home/pi/docker/data/pure-ftpd/ftp/ftpusers:/home/ftpusers
-      - /home/pi/docker/archive:/home/archive
+      - /home/pi/docker/data/pure-ftpd/archive:/home/archive
     environment:
       - AZURE_ACCOUNT_KEY
       - NOTIFICATION_URL
