@@ -7,8 +7,7 @@ services:
     network_mode: host
     tty: true
     volumes:
-      - /home/pi/docker/data/pure-ftpd/ftp/ftpusers:/home/ftpusers
-      - /home/pi/docker/data/pure-ftpd/archive:/home/archive
+      - /home/camera:/home/camera
     environment:
-      - AZURE_ACCOUNT_KEY
-      - NOTIFICATION_URL
+      - AZURE_ACCOUNT_KEY=
+      - NOTIFICATION_URL=

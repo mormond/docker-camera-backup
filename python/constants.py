@@ -3,8 +3,8 @@ import os
 azureAccountName = os.environ.get('AZURE_ACCOUNT_NAME', 'cambackup')
 azureAccountKey = os.environ.get('AZURE_ACCOUNT_KEY', '')
 
-cameraPath = os.environ.get('CAMERA_PATH', '/home/ftpusers/camera/')
-archivePath = os.environ.get('ARCHIVE_PATH', '/home/archive/camera/')
+cameraPath = os.environ.get('CAMERA_PATH', '/home/camera/ftp/')
+archivePath = os.environ.get('ARCHIVE_PATH', '/home/camera/archive/')
 
 jpgContentType = "img/jpg"
 
